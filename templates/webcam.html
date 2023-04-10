@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% block body %}
+    <div class="row webcam">
+        <div class="btn-container">
+            <button id="open" type="button" class="btn btn-primary" onclick="openVideo()">Open webcam</button>
+            <br><br>
+            <button id="close" type="button" class="btn btn-danger" onclick="closeVideo()">Close  webcam</button>
+        </div>
+        <div class="video-container">
+            <img class="corner" id="lvideo" style="width:800px;"/>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const openBtn = document.getElementById('open');
+      const closeBtn = document.getElementById('close');
+      const img = document.getElementById('lvideo');
+      const fixedNav = document.getElementById('fixedNav');
+
+      function openVideo(){
+        console.log('I m open');
+        img.src= "{{ url_for('video') }}"
+        fixedNav.style.display='none';
+        }
+
+      function closeVideo(){
+        console.log('I m close');
+        img.src = "";
+        fixedNav.style.display='block';
+        }
+    </script>
+</div>
+
+{% endblock %}
+

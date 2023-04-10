@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block body %}
+  <div class="upload-image container">
+    <div class="custom-row row">
+      <div class="col-5">
+        <div class="image-upload-wrapper">
+          <div class="image-upload-box">
+            <input type="file" id="selectedImage" name="myfile" accept="image/*"><br><br>
+            <button id="predictButton"class="btn btn-primary btn-lg" onclick="predictImage()">Detect Objects</button>
+          </div>
+        </div>
+        <div class="or">
+          <hr style="border-width: 1px" />
+          <h5>Or</h5>
+          <h3>Try with the Sample Images:</h1>
+        </div>
+        <div class="image-cat-wrapper">
+          <div class="image-box" onclick="loadSample('sam1')">
+            <img src={{ url_for('static', filename='uploads/sam1.jpg') }} alt="img"
+            width="125px" height="125px">
+          </div>
+          <div class="image-box" onclick="loadSample('sam2')">
+            <img src={{ url_for('static', filename='uploads/sam2.jpg') }} alt="img"
+            width="125px" height="125px">
+          </div>
+          <div class="image-box" onclick="loadSample('sam3')">
+            <img src={{ url_for('static', filename='uploads/sam3.jpg') }} alt="img"
+            width="125px" height="125px">
+          </div>
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="predict-col">
+          <div class="predict-head">
+            <h4>Object Detection</h4>
+            <button id="clearImages" class="btn btn-outline-primary btn-sm" onclick="clearResults()">Clear</button>
+          </div>
+          <div>
+            <h2 style="text-align: start; color:#004658;">Results:</h2>
+            <div  class="d-flex justify-content-center" 
+              <div id="spinner" class="spinner-border" role="status" style="display: none;"></div>
+                <span class="visually-hidden"> </span>
+              </div>
+            </div>
+            <div id="resultImage" class="output-image" style="display:none">
+            </div>
+            <div>
+            <hr>
+            <h6>Possible Objects:</h6>
+              <div id ='display-result-wrapper' class="display-result-wrapper">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

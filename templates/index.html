@@ -1,0 +1,105 @@
+{% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
+<div>
+  <div class="main1-body">
+    <div class="main-headings">
+      <span id="main-head">Traditional Bhutanese Wood & Cane</span><br />
+      <span id="sub-head">Objects Recognition System</span>
+    </div>
+    <div class="custom-buttons">
+      <button href="/upload_page" type="button" class="btn btn-primary">Upload Image</button>&nbsp &nbsp
+      <button href="/webcam_page" type="button" class="btn btn-danger">
+        Live Object Detection
+      </button>
+    </div>
+  </div>
+  
+  <div class="card-object" id="objectsPage">
+    <span id="sub-head">List of Objects</span>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src={{ url_for('static', filename='mask.jpg')
+        }} alt="Card image cap" height="400px">
+        <div class="card-body">
+          <h5 class="card-title">Mask(འབགཔ།)</h5>
+          <p class="card-text">
+            A beautiful Bhutanese mask handmade in Bhutan used for the religious mask dances. The mask is made out of light wood which is carefully crafted as per the Buddhists’ philosophies. The mask comes in different sizes and colors signifying different symbols in the Vajrayāna tradition of Buddhism.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src={{ url_for('static',
+        filename='guitar.jpg') }} alt="Card image cap" height="400px">
+        <div class="card-body">
+          <h5 class="card-title"> Dramyen(སྒྲ་སྙན།)</h5>
+          <p class="card-text">
+            Drumnyen can be used in every song however it is used largely and popularly with boedra, and Zhungdra songs of bhuta. It is made up of wood in combination with leather.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src={{ url_for('static',
+        filename='zapchu.jpg') }} alt="Card image cap" height="400px">
+        <div class="card-body">
+          <h5 class="card-title">Zepchu (ཟེབ་ཅུང།)</h5>
+          <p class="card-text">
+            Basket(Zepchu) comes in different sizes and colors. It is mostly made up of thinly sliced and long strips of cane. As Zepchu is mostly used as horse packs for long journeys, it is made sturdy enough to withstand falls and jolts. Nowadays it has gained popularity amongst tour operators in transporting camping equipment and edible items for tourists. 
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src={{ url_for('static', filename='chedrum.png')
+        }} alt="Card image cap" height="400px">
+        <div class="card-body">
+          <h5 class="card-title"> </h5>Chedrum (གཅོད་ཌམ།) </h5>
+          <p class="card-text">
+           Chedrum is an instrument used in performing religious rituals.  Chedrum are made up of different materials such as wood, skull, leather and beautiful pieces of cloths. Chedrum are used in place of cymbal in case of small religious rituals as an offering of soothing sound to please the gods (the Three Gems)
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src={{ url_for('static',
+        filename='bayku.jpg') }} alt="Card image cap" height="400px">
+        <div class="card-body">
+          <h5 class="card-title">Baykhu set ()</h5>
+          <p class="card-text">
+            Baykhu set is beautifully woven with fine Yula slices. It is used for displaying Tshog (religious offerings) while performing religious rituals and celebrations. It is also used as a decorative item in the house.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src={{ url_for('static',
+        filename='bangkhad.jpg') }} alt="Card image cap" height="400px">
+        <div class="card-body">
+          <h5 class="card-title">Bangkhab(བང་ཁ།)</h5>
+          <p class="card-text">
+            Bangkhab is a household item used for drying vegetables, storing fermented corns for brewing local ara, winnowing grains and for many other household chores. It is made of thinly sliced bamboo or cane pieces woven using skills called the five “(5) press and two (2) lift” system.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+</div>
+{% endblock %} {% block footer %} {% endblock %}
