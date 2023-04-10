@@ -1,11 +1,11 @@
-<h1>Home Page</h1>
-![Home Page](readme_images/home1.png)<br>
-![Home Page](readme_images/home2.png)<br>
-![Home Page](readme_images/home3.png)<br>
+**Home Page**
+![Home Page](readme_images/home1.png)
+![Home Page](readme_images/home2.png)
+![Home Page](readme_images/home3.png)
 
-<h1>Image Upload Page</h1>
-![Upload Page](readme_images/upload.png)<br>
-![Upload Page](readme_images/upload1.png)<br>
+**Image Upload Page**
+![Upload Page](readme_images/upload.png)
+![Upload Page](readme_images/upload1.png)
 
-<h1>Real Time Detection</h1>
+**Real Time Detection**
 ![Upload Page](readme_images/webcam.png)
